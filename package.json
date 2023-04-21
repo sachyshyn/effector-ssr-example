@@ -24,6 +24,7 @@
   "dependencies": {
     "effector": "^22.8.1",
     "effector-react": "^22.5.1",
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -46,6 +47,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^21.1.0",
+    "nodemon": "^2.0.22",
     "prettier": "^2.8.4",
     "rimraf": "^4.1.2",
     "sass": "^1.58.0",
