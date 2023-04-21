@@ -69,6 +69,7 @@
   width: 120px;
   height: 120px;
   position: absolute;
+  animation: rotateFigure 10s linear infinite;
 
   &-wrapper {
     height: 360px;
@@ -77,11 +78,24 @@
   }
 
   &--circle {
+    top: 50%;
+    left: 8%;
     border-radius: 50%;
-    background-color: #395c6b;
+    background: linear-gradient(230deg, #395c6b 16%, #395c6b40 68%, #395c6b00 85%);
   }
 
   &--square {
+    top: 38%;
+    right: 35%;
     background-color: #bcd3f2;
+  }
+}
+
+@keyframes rotateFigure {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
