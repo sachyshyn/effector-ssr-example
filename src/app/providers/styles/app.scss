@@ -49,6 +49,7 @@
     --margin-top-coefficient: 2;
     --margin-bottom-coefficient: 1.4;
     --font-size-coefficient: 3;
+
     line-height: 1.2;
   }
 
@@ -69,7 +70,7 @@
   width: 120px;
   height: 120px;
   position: absolute;
-  animation: rotateFigure 10s linear infinite;
+  animation: rotate-figure 10s linear infinite;
 
   &-wrapper {
     height: 360px;
@@ -91,10 +92,11 @@
   }
 }
 
-@keyframes rotateFigure {
+@keyframes rotate-figure {
   from {
     transform: rotate(0);
   }
+
   to {
     transform: rotate(360deg);
   }
