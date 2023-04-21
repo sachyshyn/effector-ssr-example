@@ -22,6 +22,8 @@
     "husky:init": "npm run husky:install && npm run set-git-hook:prepush && npm run set-git-hook:precommit"
   },
   "dependencies": {
+    "effector": "^22.8.1",
+    "effector-react": "^22.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
