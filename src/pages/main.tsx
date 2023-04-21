@@ -1,25 +1,56 @@
 export function MainPage() {
   return (
     <main>
-      <h1>Main Page</h1>
-      <p>This text has been generated on the client side</p>
+      <div className="container">
+        <h1 className="heading heading--1">Main Page</h1>
+      </div>
+      <div className="container">
+        <p>This text has been generated on the client side</p>
+      </div>
       <section>
-        <h2>The content below has been shuffled on the client side</h2>
-        <div>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
-          <div>8</div>
-          <div>9</div>
+        <div className="container">
+          <h2 className="heading heading--2">The content below has been shuffled on the client side</h2>
+        </div>
+        <div className="container wrapper">
+          <div className="wrapper__item">
+            <div className="content-item flex flex--centered">1</div>
+          </div>
+          <div className="wrapper__item">
+            <div className="content-item flex flex--centered">2</div>
+          </div>
+          <div className="wrapper__item">
+            <div className="content-item flex flex--centered">3</div>
+          </div>
+          <div className="wrapper__item">
+            <div className="content-item flex flex--centered">4</div>
+          </div>
+          <div className="wrapper__item">
+            <div className="content-item flex flex--centered">5</div>
+          </div>
+          <div className="wrapper__item">
+            <div className="content-item flex flex--centered">6</div>
+          </div>
+          <div className="wrapper__item">
+            <div className="content-item flex flex--centered">7</div>
+          </div>
+          <div className="wrapper__item">
+            <div className="content-item flex flex--centered">8</div>
+          </div>
+          <div className="wrapper__item">
+            <div className="content-item flex flex--centered">9</div>
+          </div>
         </div>
       </section>
       <section>
-        <h2>the elements animation has been randomly chosen on the cliend side</h2>
-        <div></div>
+        <div className="container">
+          <h2 className="heading heading--2">The element animation has been randomly chosen on the cliend side</h2>
+        </div>
+        <div className="container">
+          <div className="figure-wrapper">
+            <div className="figure figure--square animated"></div>
+            <div className="figure figure--circle animated"></div>
+          </div>
+        </div>
       </section>
     </main>
   );
