@@ -1,7 +1,8 @@
 import { Container, Wrapper, Heading } from '@shared/ui';
 import { $boxes, Box } from '@entities/box';
 import { useStore } from 'effector-react';
-import { shuffleButtonClicked, shuffleResetted } from '@features/box/generate-boxes';
+import { ResetBoxesButton } from '@features/box/reset-boxes';
+import { ShuffleBoxesButton } from '@features/box/shuffle-boxes';
 
 export function MainPage() {
   const boxes = useStore($boxes);
@@ -20,13 +21,8 @@ export function MainPage() {
         </Container>
         <Container>
           <Wrapper>
-            <button type="button" onClick={() => shuffleButtonClicked()}>
-              shuffle boxes
-            </button>
-
-            <button type="button" onClick={() => shuffleResetted()}>
-              reset shuffle
-            </button>
+            <ShuffleBoxesButton />
+            <ResetBoxesButton />
           </Wrapper>
         </Container>
         <Container className="mt-2">
