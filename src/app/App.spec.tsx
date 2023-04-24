@@ -7,7 +7,7 @@ describe('App', () => {
     test('should render properly', async () => {
       render(<App />);
 
-      expect(screen.getByText(/count/i)).toBeInTheDocument();
+      expect(screen.getByText(/This text has been generated/i)).toBeInTheDocument();
     });
   });
 });
