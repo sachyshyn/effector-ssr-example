@@ -92,6 +92,12 @@
   }
 }
 
+@for $i from 1 through 4 {
+  .mt-#{$i} {
+    margin-top: calc($i * var(--base-gap));
+  }
+}
+
 @keyframes rotate-figure {
   from {
     transform: rotate(0);
