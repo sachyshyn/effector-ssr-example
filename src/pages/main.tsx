@@ -1,6 +1,12 @@
 import { Container, Wrapper, Heading } from '@shared/ui';
+import { $boxes, Box } from '@entities/box';
+import { useStore } from 'effector-react';
+import { ResetBoxesButton } from '@features/box/reset-boxes';
+import { ShuffleBoxesButton } from '@features/box/shuffle-boxes';
 
 export function MainPage() {
+  const boxes = useStore($boxes);
+
   return (
     <main>
       <Container>
@@ -15,39 +21,23 @@ export function MainPage() {
         </Container>
         <Container>
           <Wrapper>
-            <Wrapper.Item>
-              <div className="content-item flex flex--centered">1</div>
-            </Wrapper.Item>
-            <Wrapper.Item>
-              <div className="content-item flex flex--centered">2</div>
-            </Wrapper.Item>
-            <Wrapper.Item>
-              <div className="content-item flex flex--centered">3</div>
-            </Wrapper.Item>
-            <Wrapper.Item>
-              <div className="content-item flex flex--centered">4</div>
-            </Wrapper.Item>
-            <Wrapper.Item>
-              <div className="content-item flex flex--centered">5</div>
-            </Wrapper.Item>
-            <Wrapper.Item>
-              <div className="content-item flex flex--centered">6</div>
-            </Wrapper.Item>
-            <Wrapper.Item>
-              <div className="content-item flex flex--centered">7</div>
-            </Wrapper.Item>
-            <Wrapper.Item>
-              <div className="content-item flex flex--centered">8</div>
-            </Wrapper.Item>
-            <Wrapper.Item>
-              <div className="content-item flex flex--centered">9</div>
-            </Wrapper.Item>
+            <ShuffleBoxesButton />
+            <ResetBoxesButton />
+          </Wrapper>
+        </Container>
+        <Container className="mt-2">
+          <Wrapper>
+            {boxes.map((boxNumber) => (
+              <Wrapper.Item key={boxNumber}>
+                <Box number={boxNumber} />
+              </Wrapper.Item>
+            ))}
           </Wrapper>
         </Container>
       </section>
-      <section>
+      <section className="mt-4">
         <Container>
-          <Heading type="h2">The element animation has been randomly chosen on the cliend side</Heading>
+          <Heading type="h2">The element animation has been randomly chosen on the client side</Heading>
         </Container>
         <Container>
           <div className="figure-wrapper">
