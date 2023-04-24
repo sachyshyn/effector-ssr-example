@@ -1,9 +1,11 @@
 import { Container, Wrapper, Heading } from '@shared/ui';
-import { Box } from '@entities/box';
-
-const boxes = Array.from({ length: 9 }, (_, i) => i + 1);
+import { $boxes, Box } from '@entities/box';
+import { useStore } from 'effector-react';
+import { shuffleButtonClicked, shuffleResetted } from '@features/box/generate-boxes';
 
 export function MainPage() {
+  const boxes = useStore($boxes);
+
   return (
     <main>
       <Container>
@@ -17,6 +19,17 @@ export function MainPage() {
           <Heading type="h2">The content below has been shuffled on the client side</Heading>
         </Container>
         <Container>
+          <Wrapper>
+            <button type="button" onClick={() => shuffleButtonClicked()}>
+              shuffle boxes
+            </button>
+
+            <button type="button" onClick={() => shuffleResetted()}>
+              reset shuffle
+            </button>
+          </Wrapper>
+        </Container>
+        <Container className="mt-2">
           <Wrapper>
             {boxes.map((boxNumber) => (
               <Wrapper.Item key={boxNumber}>
