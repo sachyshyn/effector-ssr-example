@@ -1,4 +1,4 @@
 export { Box } from './ui';
-export { $boxes } from './model';
+export { $boxes, $boxesDescription } from './model';
 export type { BoxProps, BoxType } from './lib';
-export { DEFAULT_BOX_AMOUNT, getDefaultBoxes } from './lib';
+export { DEFAULT_BOX_AMOUNT, getDefaultBoxes, clientSideBoxesText, serverSideBoxesText } from './lib';

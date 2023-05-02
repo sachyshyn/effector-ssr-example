@@ -1,16 +1,23 @@
-import { $boxes, Box } from '@entities/box';
+import { $boxes, $boxesDescription, Box } from '@entities/box';
 import { ResetBoxesButton } from '@features/box/reset-boxes';
-import { ShuffleBoxesButton } from '@features/box/shuffle-boxes';
+import { ShuffleBoxesButton, boxesShuffled } from '@features/box/shuffle-boxes';
 import { Container, Heading, Wrapper } from '@shared/ui';
 import { useStore } from 'effector-react';
+import '../model';
+import { useEffect } from 'react';
 
 export function BoxWidget() {
   const boxes = useStore($boxes);
+  const boxesDescription = useStore($boxesDescription);
+
+  useEffect(() => {
+    boxesShuffled();
+  }, []);
 
   return (
     <section>
       <Container>
-        <Heading type="h2">The content below has been shuffled on the client side</Heading>
+        <Heading type="h2">{boxesDescription}</Heading>
       </Container>
       <Container>
         <Wrapper>
