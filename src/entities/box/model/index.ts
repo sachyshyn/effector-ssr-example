@@ -1,1 +1,1 @@
-export { $boxes } from './box.model';
+export { $boxes, $boxesDescription } from './box.model';

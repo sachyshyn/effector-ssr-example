@@ -1,9 +1,9 @@
-import { shuffleButtonClicked } from '../model';
+import { boxesShuffled } from '../model';
 
 export function ShuffleBoxesButton() {
   return (
-    <button type="button" onClick={() => shuffleButtonClicked()}>
-      reset shuffle
+    <button type="button" onClick={() => boxesShuffled()}>
+      shuffle boxes
     </button>
   );
 }

@@ -1,1 +1,1 @@
-export { BoxWidget } from './box-widget';
+export { BoxWidget } from './ui';
