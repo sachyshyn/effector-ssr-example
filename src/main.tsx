@@ -1,9 +1,5 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { App } from './app';
+import { withProviders } from '@app/providers';
+import { createRoot } from '@shared/lib/react';
+import { APP_ROOT } from '@shared/config';
 
-createRoot(document.getElementById('root') as HTMLElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+createRoot(APP_ROOT).render(withProviders());
