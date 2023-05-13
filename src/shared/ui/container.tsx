@@ -5,14 +5,14 @@ interface ContainerProps extends PropsWithChildren {
 }
 
 function Container(props: ContainerProps) {
-  return <div className={`container ${props.className}`}>{props.children}</div>;
+  return <div className={`container ${props.className || ''}`}>{props.children}</div>;
 }
 function Wrapper(props: ContainerProps) {
-  return <div className={`wrapper ${props.className}`}>{props.children}</div>;
+  return <div className={`wrapper ${props.className || ''}`}>{props.children}</div>;
 }
 
 function WrapperItem(props: ContainerProps) {
-  return <div className={`wrapper__item ${props.className}`}>{props.children}</div>;
+  return <div className={`wrapper__item ${props.className || ''}`}>{props.children}</div>;
 }
 
 Wrapper.Item = WrapperItem;

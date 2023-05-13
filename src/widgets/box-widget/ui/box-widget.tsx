@@ -4,7 +4,7 @@ import { ShuffleBoxesButton, boxesShuffled } from '@features/box/shuffle-boxes';
 import { Container, Heading, Wrapper } from '@shared/ui';
 import { useStore } from 'effector-react';
 import '../model';
-import { useEffect } from 'react';
+import { useEffect } from '@shared/lib/react';
 
 export function BoxWidget() {
   const boxes = useStore($boxes);
